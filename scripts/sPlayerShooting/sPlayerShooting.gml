@@ -26,3 +26,8 @@ function shootProjectile() {
 		shootingInterval = true	
 	}
 }
+
+function fireRateToRPM(_fireRate) {
+    // Convert the fire rate value to RPM (assuming 60 fps)
+    return (60 / _fireRate) * 60;
+}

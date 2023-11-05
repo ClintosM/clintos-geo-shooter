@@ -16,8 +16,8 @@ alpha = 0.5 * sin(current_time / 250) + 0.6
 
 #region Draw Hotbar
 
-for (xPos = 40; xPos < array_length(shootingModeSlots) * 65.2; xPos += 70) {
-    firingModeSprite = (shootingModeSlots[counter] == undefined) ? sEmptyFiringMode : shootingModeSlots[counter].sprite
+for (xPos = 40; xPos < array_length(patternSlots) * 65.2; xPos += 70) {
+    firingModeSprite = (patternSlots[counter] == undefined) ? sEmptyFiringMode : patternSlots[counter].sprite
     var col = (counter != currentMode) ? c_gray : c_white
     var scale = (counter != currentMode) ? 3 : 4
     draw_sprite_ext(firingModeSprite, 0, xPos, yPos, scale, scale, 0, col, (counter != currentMode) ? alpha : 1)
@@ -26,41 +26,25 @@ for (xPos = 40; xPos < array_length(shootingModeSlots) * 65.2; xPos += 70) {
 
 #endregion
 
-#region Draw Shooting Mode Stats
+#region Draw Pattern Stats
 
-var currentShootingMode = shootingModeSlots[currentMode]
+var activePattern = patternSlots[currentMode];
+var yPos = 84;
+var maxFirerate = 60; // Assuming 10 is the maximum firerate for scaling the bar
+var maxDamage = 10; // Assuming 100 is the maximum damage for scaling the bar
+var maxBullets = 20; // Assuming 20 is the maximum bullets for scaling the bar
 
-if (currentShootingMode != undefined) {
-    // Draw Name
-    draw_set_color(c_black)
-    draw_text_transformed(16, 86, currentShootingMode.name, 2, 2, 0)
-    draw_set_color(c_white)
-    draw_text_transformed(16, 84, currentShootingMode.name, 2, 2, 0)
+if (activePattern != undefined) {
 
-    // Determine Color Based on Element
-    switch currentShootingMode.element {
-        case "Pyric":
-            color = c_red
-            break	
-        case "Sonic":
-            color = c_aqua
-            break
-        case "Cosmic":
-            color = c_purple
-            break
-        case "Runic":
-            color = c_green
-            break
-        default:
-            color = c_white
-            break
-    }
+    drawPatternStats(activePattern.name, 16, yPos, 2, activePattern.patternColor, c_black, 2);
+    yPos += 54; 
     
-    // Draw Element
-    draw_set_color(c_black)
-    draw_text_transformed(16, 128, currentShootingMode.element, 2, 2, 0)
-    draw_set_color(color)
-    draw_text_transformed(16, 126, currentShootingMode.element, 2, 2, 0)
+    yPos = drawFireRateStatWithBar("Fire Rate", activePattern.firerate, maxFirerate, yPos, 1);
+    yPos = drawStatWithBar("Damage", activePattern.dmg, maxDamage, yPos, 1);
+    yPos = drawStatWithBar("Bullets", activePattern.bulletAmount, maxBullets, yPos, 1);
+    
+    //drawPatternStats("Passive: " + string(activePattern.passivePerk), 16, yPos, 1, c_white, c_black, 2);
+    //yPos += 30; 
 }
 
 #endregion

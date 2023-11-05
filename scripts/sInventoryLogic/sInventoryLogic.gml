@@ -11,18 +11,18 @@ function updateHotbarSlot() {
     }
     
     if (dir != 0) {
-        while (!changeMade && loopCounter < array_length(shootingModeSlots)) {
+        while (!changeMade && loopCounter < array_length(patternSlots)) {
             loopCounter++
 
             currentMode += dir
 
-            if (currentMode > array_length(shootingModeSlots) - 1) {
+            if (currentMode > array_length(patternSlots) - 1) {
                 currentMode = 0
             } else if (currentMode < 0) {
-                currentMode = array_length(shootingModeSlots) - 1
+                currentMode = array_length(patternSlots) - 1
             }
 
-            if (shootingModeSlots[currentMode] != undefined || 0) {
+            if (patternSlots[currentMode] != undefined || 0) {
                 changeMade = true
             }
         }
@@ -38,10 +38,10 @@ function updateHotbarSlot() {
 
 
 function updatePlayerFiringMode() {
-    if (shootingModeSlots[currentMode] != undefined || 0) {
-        oPlayer.rpm = shootingModeSlots[currentMode].firerate
+    if (patternSlots[currentMode] != undefined || 0) {
+        oPlayer.rpm = patternSlots[currentMode].firerate
         oPlayer.firerateCooldown = oPlayer.rpm
-        oPlayer.bulletAmount = shootingModeSlots[currentMode].bulletAmount	
+        oPlayer.bulletAmount = patternSlots[currentMode].bulletAmount	
     } else {
 		oPlayer.rpm = 60
 		oPlayer.firerateCooldown = oPlayer.rpm

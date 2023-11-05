@@ -2,12 +2,12 @@
 event_inherited()
 
 
-bulletProperties = oPlayerInventoryManager.shootingModeSlots[oPlayerInventoryManager.currentMode]
+bulletProperties = oPlayerInventoryManager.patternSlots[oPlayerInventoryManager.currentMode]
 
 //implementation 1
-bulletColor = bulletProperties != undefined ? oPlayerInventoryManager.shootingModeSlots[oPlayerInventoryManager.currentMode].bulletColor : c_white
+bulletColor = bulletProperties != undefined ? oPlayerInventoryManager.patternSlots[oPlayerInventoryManager.currentMode].patternColor : c_white
 //implementation 2
-bulletColor = bulletProperties != undefined ? bulletProperties.bulletColor : c_white
+bulletColor = bulletProperties != undefined ? bulletProperties.patternColor : c_white
 
 oCamera.shake = shake
 randomSpray = irandom_range(-spray, spray);
