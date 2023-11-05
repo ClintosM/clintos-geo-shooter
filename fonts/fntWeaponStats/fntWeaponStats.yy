@@ -2,7 +2,7 @@
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
   "name": "fntWeaponStats",
-  "AntiAlias": 0,
+  "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 21,
   "ascenderOffset": 0,

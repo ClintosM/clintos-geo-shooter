@@ -50,6 +50,7 @@
     {"id":{"name":"sndClick1","path":"sounds/sndClick1/sndClick1.yy",},},
     {"id":{"name":"sEnemyHealthFrame","path":"sprites/sEnemyHealthFrame/sEnemyHealthFrame.yy",},},
     {"id":{"name":"oShootingModeParent","path":"objects/oShootingModeParent/oShootingModeParent.yy",},},
+    {"id":{"name":"sInventoryDrawLogic","path":"scripts/sInventoryDrawLogic/sInventoryDrawLogic.yy",},},
     {"id":{"name":"sndWeaponTypeSwapUp","path":"sounds/sndWeaponTypeSwapUp/sndWeaponTypeSwapUp.yy",},},
     {"id":{"name":"oCursor","path":"objects/oCursor/oCursor.yy",},},
     {"id":{"name":"Sprite16","path":"sprites/Sprite16/Sprite16.yy",},},

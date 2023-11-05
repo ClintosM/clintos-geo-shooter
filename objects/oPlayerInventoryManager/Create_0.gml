@@ -1,18 +1,25 @@
 /// @description desc
+randomize()
 
 isEnabled = false
-
 
 #region Hotbar
 
 currentMode = 0
 
-var pyricBasic = new shootingMode("Flame Rounds", "Pyric", sFiringModeNova, 0, 0, 1, 1, c_red)
-var sonicBasic = new shootingMode("Sound Burst", "Sonic", sFiringModeSonic, 0, 0, 25, 5, c_aqua)
-var cosmicBasic = new shootingMode("Astral Barrage", "Cosmic", sFiringModeCosmic, 0, 0, 5, 3, c_purple)
-var runicBasic = new shootingMode("Magic Stream", "Runic", sFiringModeRunic, 0, 0, 30, 10, c_green)
+var basePyricElementStruct = global.basePattern.elements.pyric
+var baseSonicElementStruct = global.basePattern.elements.sonic
+var baseRunicElementStruct = global.basePattern.elements.runic
+var baseCosmicElementStruct = global.basePattern.elements.cosmic
 
-shootingModeSlots = [pyricBasic, sonicBasic, undefined, undefined, runicBasic, undefined, cosmicBasic, undefined]
+var pyricPattern = new initFirePattern(basePyricElementStruct, "Pyric Shot", 0, true)
+var runicPattern = new initFirePattern(baseRunicElementStruct, "Runic Shot", 0, true)
+var sonicPattern = new initFirePattern(baseSonicElementStruct, "Sonic Shot", 0, true)
+var cosmicPattern = new initFirePattern(baseCosmicElementStruct, "Cosmic Shot", 0, true)
+
+patternSlots = [pyricPattern, sonicPattern, runicPattern, cosmicPattern]
+
+show_debug_message(patternSlots)
 
 updatePlayerFiringMode();
 
