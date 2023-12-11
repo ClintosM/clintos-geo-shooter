@@ -17,7 +17,7 @@ var runicPattern = new initFirePattern(baseRunicElementStruct, "Runic Shot", 0, 
 var sonicPattern = new initFirePattern(baseSonicElementStruct, "Sonic Shot", 0, true)
 var cosmicPattern = new initFirePattern(baseCosmicElementStruct, "Cosmic Shot", 0, true)
 
-patternSlots = [pyricPattern, sonicPattern, runicPattern, cosmicPattern]
+patternSlots = [undefined]
 
 show_debug_message(patternSlots)
 

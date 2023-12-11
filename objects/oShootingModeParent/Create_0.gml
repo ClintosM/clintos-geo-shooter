@@ -2,19 +2,29 @@
 
 switch(elementType) {
 	
-	case elementType[0]:
+	case "Pyric":
 		elementColor = c_red;
-		break;
+		var basicPattern = global.basePattern.elements.pyric
+		var patternName = "Pyric Shot"
+		break
 		
-	case elementType[1]:
+	case "Sonic":
 		elementColor = c_aqua;
-		break;
+		var basicPattern = global.basePattern.elements.sonic
+		var patternName = "Sonic Shot"
+		break
 		
-	case elementType[2]:
+	case "Cosmic":
 		elementColor = c_purple;
+		var basicPattern = global.basePattern.elements.cosmic
+		var patternName = "Cosmic Shot"
 		break;
 		
-	case elementType[3]:
+	case "Runic":
 		elementColor = c_green;
+		var basicPattern = global.basePattern.elements.runic
+		var patternName = "Runic Shot"
 		break;
 }
+
+basePattern = new initFirePattern(basicPattern, patternName, 0, true)

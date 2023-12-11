@@ -45,6 +45,8 @@ if (activePattern != undefined) {
     
     //drawPatternStats("Passive: " + string(activePattern.passivePerk), 16, yPos, 1, c_white, c_black, 2);
     //yPos += 30; 
+} else {
+	drawPatternStats("Void Pattern", 16, yPos, 2, c_white, c_black, 2);
 }
 
 #endregion
