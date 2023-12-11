@@ -1,7 +1,11 @@
 
 gml_pragma("global", "initBasePatterns()")
 
-function initBasePatterns() { //Function referenced in pragma function (a compiler directive)
+/*function initBasePatternsViaJSON() {
+	decodedPatterns = json_decode(basePatterns.json)
+}*/
+
+function initBasePatterns() { //Function referenced in pragma function
 	global.basePattern = {
 		elements : {
 		    pyric : {

@@ -1,0 +1,44 @@
+{
+  "elements": {
+    "pyric": {
+      "typeId": "Pyric",
+      "name": "",
+      "firerate": 5,
+      "dmg": 1,
+      "sprite": "sFiringModeNova",
+      "passivePerk": 0,
+      "bulletAmount": 0,
+      "patternColor": "c_red"
+    },
+    "sonic": {
+      "typeId": "Sonic",
+      "name": "",
+      "firerate": 5,
+      "dmg": 1,
+      "sprite": "sFiringModeSonic",
+      "passivePerk": 0,
+      "bulletAmount": 0,
+      "patternColor": "c_aqua"
+    },
+    "runic": {
+      "typeId": "Runic",
+      "name": "",
+      "dmg": 1,
+      "firerate": 1,
+      "sprite": "sFiringModeRunic",
+      "passivePerk": 0,
+      "bulletAmount": 0,
+      "patternColor": "c_green"
+    },
+    "cosmic": {
+      "typeId": "Cosmic",
+      "name": "",
+      "firerate": 10,
+      "dmg": 1,
+      "sprite": "sFiringModeCosmic",
+      "passivePerk": 0,
+      "bulletAmount": 0,
+      "patternColor": "c_purple"
+    }
+  }
+}

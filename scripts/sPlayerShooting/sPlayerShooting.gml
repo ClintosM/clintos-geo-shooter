@@ -1,8 +1,6 @@
 function shootProjectile() {
 	if mouse_check_button(mb_left) {
-
 		if shootingInterval {
-			
 			firerateCooldown = rpm
 			
 			if bulletAmount > 1 {
@@ -12,7 +10,6 @@ function shootProjectile() {
 			} else {
 				instance_create_depth(x, y, 2, oBullet)
 			}
-			
 			shootingInterval = false
 		}		
 	}

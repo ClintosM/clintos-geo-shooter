@@ -1,11 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oNovaBasic",
+  "name": "oPyricBasic",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oShootingModeParent","path":"objects/oShootingModeParent/oShootingModeParent.yy",},"propertyId":{"name":"elementType","path":"objects/oShootingModeParent/oShootingModeParent.yy",},"value":"\"Nova\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oShootingModeParent","path":"objects/oShootingModeParent/oShootingModeParent.yy",},"propertyId":{"name":"elementType","path":"objects/oShootingModeParent/oShootingModeParent.yy",},"value":"\"Pyric\"",},
   ],
   "parent": {
     "name": "Shooting Modes",
@@ -22,11 +22,16 @@
   "physicsGroup": 1,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
-  "physicsObject": false,
+  "physicsObject": true,
   "physicsRestitution": 0.1,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsShapePoints": [],
+  "physicsShapePoints": [
+    {"x":0.0,"y":0.0,},
+    {"x":16.0,"y":0.0,},
+    {"x":16.0,"y":16.0,},
+    {"x":0.0,"y":16.0,},
+  ],
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
