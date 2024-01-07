@@ -1,7 +1,9 @@
 /// @description desc
-
-// Inherit the parent event
 event_inherited();
 
-maxHp = 15
-hp = maxHp
+maxHp = startHp
+hp = maxHp	
+shieldHp = startShieldHp
+
+chasePlayer = false
+activeState = chooseState

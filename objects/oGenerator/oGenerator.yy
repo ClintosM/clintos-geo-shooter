@@ -1,0 +1,57 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oGenerator",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oInspectable","path":"objects/oInspectable/oInspectable.yy",},"propertyId":{"name":"inspectName","path":"objects/oInspectable/oInspectable.yy",},"value":"Proto Generator",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oInspectable","path":"objects/oInspectable/oInspectable.yy",},"propertyId":{"name":"inspectDescription","path":"objects/oInspectable/oInspectable.yy",},"value":"Where does this come from???",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oInspectable","path":"objects/oInspectable/oInspectable.yy",},"propertyId":{"name":"inspectDistance","path":"objects/oInspectable/oInspectable.yy",},"value":"8",},
+  ],
+  "parent": {
+    "name": "Generators",
+    "path": "folders/Objects/Generators.yy",
+  },
+  "parentObjectId": {
+    "name": "oInspectable",
+    "path": "objects/oInspectable/oInspectable.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.0,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [
+    {"x":0.0,"y":0.0,},
+    {"x":20.0,"y":0.0,},
+    {"x":20.0,"y":40.0,},
+    {"x":0.0,"y":40.0,},
+  ],
+  "physicsStartAwake": true,
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"currentElement","filters":[],"listItems":[
+        "\"pyric\"",
+        "\"runic\"",
+        "\"cosmic\"",
+        "\"sonic\"",
+      ],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"pyric\"","varType":6,},
+  ],
+  "solid": false,
+  "spriteId": {
+    "name": "sGeneratorOff",
+    "path": "sprites/sGeneratorOff/sGeneratorOff.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}

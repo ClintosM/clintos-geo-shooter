@@ -1,8 +1,5 @@
 /// @description desc
 
-if (isEnabled) {
-	draw_sprite_ext(Sprite16, 0, 0, 0, 2, 2, 0, c_white, 0.7)
-}
 
 #region Set Properties
 
@@ -26,27 +23,53 @@ for (xPos = 40; xPos < array_length(patternSlots) * 65.2; xPos += 70) {
 
 #endregion
 
-#region Draw Pattern Stats
+if (isInventoryOpen) {
+ 	#region Draw Pattern Stats
 
-var activePattern = patternSlots[currentMode];
-var yPos = 84;
-var maxFirerate = 60; // Assuming 10 is the maximum firerate for scaling the bar
-var maxDamage = 10; // Assuming 100 is the maximum damage for scaling the bar
-var maxBullets = 20; // Assuming 20 is the maximum bullets for scaling the bar
+	var activePattern = patternSlots[currentMode]
+	var yPos = 84
+	var maxFirerate = 60
+	var maxDamage = 10
+	var maxBullets = 20
 
-if (activePattern != undefined) {
+	if (activePattern != undefined) {
 
-    drawPatternStats(activePattern.name, 16, yPos, 2, activePattern.patternColor, c_black, 2);
-    yPos += 54; 
+	    drawPatternStats(activePattern.name, 16, yPos, 2, activePattern.patternColor, c_black, 2)
+	    yPos += 54
     
-    yPos = drawFireRateStatWithBar("Fire Rate", activePattern.firerate, maxFirerate, yPos, 1);
-    yPos = drawStatWithBar("Damage", activePattern.dmg, maxDamage, yPos, 1);
-    yPos = drawStatWithBar("Bullets", activePattern.bulletAmount, maxBullets, yPos, 1);
+	    yPos = drawFireRateStatWithBar("Fire Rate", activePattern.firerate, maxFirerate, yPos, 1)
+	    yPos = drawStatWithBar("Damage", activePattern.dmg, maxDamage, yPos, 1)
+	    yPos = drawStatWithBar("Bullets", activePattern.bulletAmount, maxBullets, yPos, 1)
     
-    //drawPatternStats("Passive: " + string(activePattern.passivePerk), 16, yPos, 1, c_white, c_black, 2);
-    //yPos += 30; 
+	    //drawPatternStats("Passive: " + string(activePattern.passivePerk), 16, yPos, 1, c_white, c_black, 2);
+	    //yPos += 30; 
+	} else {
+		drawPatternStats("Void Pattern", 16, yPos, 2, c_white, c_black, 2);
+	}
+
+	#endregion
+
+	#region Draw Items
+
+	draw_set_color(c_white)
+	draw_set_font(fntPlayerStats);
+	counter = 0
+
+	for (pos = 0; pos < array_length(collectedItems); pos++) {
+		counter += 1
+		draw_text_transformed(1200, (counter * 0.15) * 500, string(collectedItems[pos].contents.itemName) + ", x" + string(collectedItems[pos].contents.quantity), 2, 2, 0)
+	}
+
+
+	#endregion
+
 } else {
-	drawPatternStats("Void Pattern", 16, yPos, 2, c_white, c_black, 2);
-}
+	var activePattern = patternSlots[currentMode]
+	var yPos = 84
 
-#endregion
+	if (activePattern != undefined) {
+		drawPatternStats(activePattern.name, 16, yPos, 2, activePattern.patternColor, c_black, 2)
+	} else {
+		drawPatternStats("Void Pattern", 16, yPos, 2, c_white, c_black, 2);
+	}	
+}

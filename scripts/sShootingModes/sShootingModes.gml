@@ -47,6 +47,16 @@ function initBasePatterns() { //Function referenced in pragma function
 		        passivePerk : 0,
 		        bulletAmount : 0,
 		        patternColor : c_purple
+		    },
+			aquatic: {
+		        typeId : "Aquatic",
+				name : "",
+		        firerate : 40,
+				dmg : 2,
+		        sprite : sFiringModeAquatic,
+		        passivePerk : 0,
+		        bulletAmount : 0,
+		        patternColor : c_blue
 		    }
 		}
 	}
@@ -84,7 +94,7 @@ function initFirePattern(_elementStruct, _name, overrides, _isRandomValsEnabled 
 
     if (overrides != undefined) {
         // Apply overrides here
-        // Example: if (overrides.firerate != undefined) firerate = overrides.firerate;
+        // Example: if (overrides.firerate != undefined) firerate = overrides.firerate
     }
 	
 	show_debug_message(_elementStruct)

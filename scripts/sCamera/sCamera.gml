@@ -3,14 +3,14 @@ function CameraLogic(){
 
 	var tpx, tpy;
 
+	shake = shakeEnabled == true ? shake : 0
+
 	move_towards_point(mouse_x, mouse_y, 0);
 	tpx = oPlayer.x + lengthdir_x(min(64, distance_to_point(mouse_x, mouse_y)), direction);
 	tpy = oPlayer.y + lengthdir_y(min(64, distance_to_point(mouse_x, mouse_y,)), direction);
 
-
 	x += (tpx - x) / 8; //10; 
 	y += (tpy - y) / 8; //10;
-
 	
 	var vpos_x = camera_get_view_x(view_camera[target_view]);
 	var vpos_y = camera_get_view_y(view_camera[target_view]);
@@ -24,6 +24,5 @@ function CameraLogic(){
 	camera_set_view_angle(view_camera[target_view], + random_range(-shake, shake) * 0.5);
 	
 	shake *= rate
-
 }
 
