@@ -6,10 +6,11 @@
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oShootingModeParent","path":"objects/oShootingModeParent/oShootingModeParent.yy",},"propertyId":{"name":"elementType","path":"objects/oShootingModeParent/oShootingModeParent.yy",},"value":"\"Pyric\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oInspectable","path":"objects/oInspectable/oInspectable.yy",},"propertyId":{"name":"inspectName","path":"objects/oInspectable/oInspectable.yy",},"value":"Basic Pyric Shot",},
   ],
   "parent": {
     "name": "Shooting Modes",
-    "path": "folders/Objects/Lifeforms/Player/Shooting Modes.yy",
+    "path": "folders/Objects/Items/Shooting Modes.yy",
   },
   "parentObjectId": {
     "name": "oShootingModeParent",
@@ -22,7 +23,7 @@
   "physicsGroup": 1,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
-  "physicsObject": true,
+  "physicsObject": false,
   "physicsRestitution": 0.1,
   "physicsSensor": false,
   "physicsShape": 1,

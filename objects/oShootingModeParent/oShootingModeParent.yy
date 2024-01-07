@@ -4,18 +4,22 @@
   "name": "oShootingModeParent",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oItem","path":"objects/oItem/oItem.yy",},"propertyId":{"name":"ofType","path":"objects/oItem/oItem.yy",},"value":"1",},
+  ],
   "parent": {
     "name": "Shooting Modes",
-    "path": "folders/Objects/Lifeforms/Player/Shooting Modes.yy",
+    "path": "folders/Objects/Items/Shooting Modes.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oItem",
+    "path": "objects/oItem/oItem.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
-  "physicsDensity": 0.5,
+  "physicsDensity": 0.0,
   "physicsFriction": 0.2,
   "physicsGroup": 1,
   "physicsKinematic": false,
@@ -27,13 +31,14 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"name","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":2,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"elementType","filters":[],"listItems":[
         "\"Pyric\"",
         "\"Sonic\"",
         "\"Cosmic\"",
         "\"Runic\"",
+        "\"Aquatic\"",
       ],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"Pyric\"","varType":6,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"elementColor","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":7,},
   ],
   "solid": false,
   "spriteId": null,

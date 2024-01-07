@@ -37,8 +37,6 @@ function updateHotbarSlot() {
 	}
 }
 
-
-
 function updatePlayerFiringMode() {
 	with(oPlayerInventoryManager) {
 	    if (patternSlots[currentMode] != undefined || 0) {

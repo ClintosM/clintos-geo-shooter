@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Shooting Modes",
-    "path": "folders/Scripts/Shooting Modes.yy",
+    "path": "folders/Scripts/Player/Shooting/Shooting Modes.yy",
   },
 }

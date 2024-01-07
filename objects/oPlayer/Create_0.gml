@@ -22,9 +22,7 @@ bulletCharge = maxBulletCharge
 
 #endregion
 
-
 text_x = x + 128
 text_y = y + 128
-displayText = "Your Stats"
 delayFactor = 0.05
 sinWave = 0
